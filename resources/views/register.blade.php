@@ -41,18 +41,35 @@
                                         <center><h2>TOURINESIA</h2></center>
 									</div>
                                     <h4 class="text-center mb-4">Daftarkan Akun Anda</h4>
-                                    <form action="https://dompet.dexignlab.com/xhtml/index.html">
+                                    <form action="register" method="post">
+                                        @csrf
                                         <div class="mb-3">
                                             <label class="mb-1"><strong>Nama Pengguna</strong></label>
-                                            <input type="text" class="form-control" placeholder="Nama Pengguna">
+                                            <input type="text" class="form-control" placeholder="Nama Pengguna" is-invalid>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label class="mb-1"><strong>Nama</strong></label>
+                                            <input type="text" class="form-control" placeholder="Nama">
                                         </div>
                                         <div class="mb-3">
                                             <label class="mb-1"><strong>Email</strong></label>
-                                            <input type="email" class="form-control" placeholder="Alamat Eail">
+                                            <input type="email" class="form-control" placeholder="Alamat Email">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label class="mb-1"><strong>Tanggal Lahir</strong></label>
+                                            <input type="date" class="form-control" placeholder="Tanggal Lahir">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label class="mb-1"><strong>Jenis Kelamin</strong></label>
+                                            <input type="text" class="form-control" placeholder="Jenis Kelamin">
                                         </div>
                                         <div class="mb-3">
                                             <label class="mb-1"><strong>Kata Sandi</strong></label>
-                                            <input type="password" class="form-control" value="Password">
+                                            <input type="password" class="form-control" placeholder="Kata Sandi">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label class="mb-1"><strong>Konfirmasi Kata Sandi</strong></label>
+                                            <input type="password" class="form-control" placeholder="Konfirmasi Kata Sandi">
                                         </div>
                                         <div class="text-center mt-4">
                                             <button type="submit" class="btn btn-primary btn-block">Daftar</button>

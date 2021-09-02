@@ -26,6 +26,7 @@
 	<!-- Style css -->
     <link rel="stylesheet" type="text/css" href="{{ asset('/css/style.css') }}">
     <script src="https://kit.fontawesome.com/9329f29326.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 	
 </head>
 <body>
@@ -559,7 +560,7 @@
         <div class="header">
             <div class="header-content">
                 <nav class="navbar navbar-expand">
-                    <div class="collapse navbar-collapse justify-content-between">
+                    <div class="collapse navbar-collapse justify-content-end">
                         <ul class="navbar-nav header-right">
 							<li class="nav-item">
 								<div class="input-group search-area">
@@ -719,6 +720,9 @@
 							</li>
                             <li class="nav-item">
 								<a href="javascript:void(0);" class="btn btn-primary d-sm-inline-block d-none">Generate Report<i class="las la-signal ms-3 scale5"></i></a>
+							</li>
+							<li class="nav-item">
+								<a href="login" class="btn btn-danger d-sm-inline-block d-none">Keluar <i class="bi bi-box-arrow-right"></i></i></a>
 							</li>
                         </ul>
                     </div>

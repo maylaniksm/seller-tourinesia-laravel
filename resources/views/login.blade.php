@@ -37,18 +37,30 @@
                             <div class="col-xl-12">
                                 <div class="auth-form">
 									<div class="text-center mb-3">
+                                        @if(session()->has('success'))
+                                    <div class="alert alert-success alert-dismissible fade show" role="alert">
+                                    {{session('success')}}
+                                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                    </div>
+                                    @endif
                                         <center><h2>TOURINESIA</h2></center>
 										<!-- <a href="index.html"><img src="images/logo-full.png" alt=""></a> -->
 									</div>
                                     <h4 class="text-center mb-4">Masuk ke Akun Anda</h4>
-                                    <form action="https://dompet.dexignlab.com/xhtml/index.html">
+                                    <form action="login" method="post">
+                                        @csrf
                                         <div class="mb-3">
                                             <label class="mb-1"><strong>Email</strong></label>
-                                            <input type="email" class="form-control" value="Alamat Email">
+                                            <input type="email" name="email" class="form-control @error('email') is-invalid @enderror" id="email" placeholder="Alamat Email" autofocus required value="{{old ('email')}}">
+                                        @error('email')
+                                            <div class="invalid-feedback">
+                                                {{$message}}
+                                            </div>
+                                        @enderror
                                         </div>
                                         <div class="mb-3">
                                             <label class="mb-1"><strong>Kata Sandi</strong></label>
-                                            <input type="password" class="form-control" value="Password">
+                                            <input type="password" name="password" class="form-control" id="password" placeholder="Kata Sandi" required>
                                         </div>
                                         <div class="row d-flex justify-content-between mt-4 mb-2">
                                             <div class="mb-3">
